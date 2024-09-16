@@ -3,7 +3,7 @@ import pandas as pd
 
 def download_dataset(dataset_path):
     dataset = pd.read_csv(dataset_path)
-    image_links = dataset['image_link'].iloc[0:100].tolist()
+    image_links = dataset['image_link'].iloc[0:1000].tolist()
     for image_link in image_links:
         download_image(image_link=image_link, save_folder='./images')
 
